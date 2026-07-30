@@ -1,0 +1,939 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #07111f;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.18), transparent 35%),
+    #07111f;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.navLinks {
+  display: flex;
+  gap: 35px;
+}
+
+.navLinks a {
+  color: #aab7ca;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navLinks a:hover {
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.tag {
+  margin: 0 0 22px;
+
+  color: #60a5fa;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 0;
+
+  font-size: clamp(45px, 6vw, 78px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+}
+
+.description {
+  max-width: 720px;
+
+  margin: 28px auto 0;
+
+  color: #9eacc0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* BUTTONS */
+
+.buttons {
+  margin-top: 35px;
+
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.buttons button {
+  padding: 15px 25px;
+
+  border-radius: 9px;
+  border: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.primaryBtn {
+  background: #2563eb;
+  color: white;
+}
+
+.primaryBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* SECURITY */
+
+.security {
+  margin-top: 25px;
+
+  color: #75869d;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}/* =========================
+   PROCESSING PAGE
+========================= */
+
+.processingPage {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.18), transparent 35%),
+    #07111f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+}
+
+.processingCard {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 50px;
+
+  background: rgba(15, 29, 48, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.processingCard h1 {
+  margin: 10px 0 15px;
+
+  font-size: 38px;
+  color: white;
+}
+
+.processingText {
+  max-width: 470px;
+  margin: auto;
+
+  color: #9eacc0;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* LOADING CIRCLE */
+
+.loader {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 30px;
+
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-top: 5px solid #3b82f6;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* PROGRESS BAR */
+
+.progressBar {
+  width: 100%;
+  height: 9px;
+
+  margin-top: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 65%;
+  height: 100%;
+
+  background: #3b82f6;
+
+  border-radius: 20px;
+
+  animation: loading 3s ease-in-out infinite;
+}
+
+@keyframes loading {
+
+  0% {
+    width: 10%;
+  }
+
+  50% {
+    width: 75%;
+  }
+
+  100% {
+    width: 95%;
+  }
+
+}
+
+
+.progressText {
+  margin-top: 10px;
+
+  color: #71839a;
+
+  font-size: 13px;
+}
+
+
+/* ANALYSIS STEPS */
+
+.analysisSteps {
+  margin-top: 35px;
+
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 12px;
+
+  padding: 20px 25px;
+}
+
+.analysisSteps p {
+  margin: 13px 0;
+
+  color: #a9b7c9;
+
+  font-size: 14px;
+}/* =========================
+   DASHBOARD
+========================= */
+
+.dashboardPage {
+  min-height: 100vh;
+  background: #07111f;
+  color: white;
+}
+
+/* Dashboard Navbar */
+
+.dashboardNav {
+  height: 75px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #091525;
+}
+
+.dashboardNav h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.dashboardNavRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.demoBadge {
+  padding: 7px 12px;
+
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+.dashboardNavRight button {
+  padding: 9px 15px;
+
+  background: transparent;
+  color: #aab7ca;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 7px;
+
+  cursor: pointer;
+}
+
+.dashboardNavRight button:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Main Dashboard */
+
+.dashboardContainer {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 55px 30px 80px;
+}
+
+
+/* Dashboard Header */
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 35px;
+}
+
+.dashboardLabel {
+  margin: 0 0 8px;
+
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.dashboardHeader h1 {
+  margin: 0;
+
+  font-size: 38px;
+}
+
+.dashboardHeader > div > p:last-child {
+  margin-top: 10px;
+
+  color: #8292a8;
+}
+
+.approvedBadge {
+  padding: 12px 18px;
+
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.1);
+
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* Score Section */
+
+.scoreGrid {
+  display: grid;
+
+  grid-template-columns: 1.3fr 1fr;
+
+  gap: 20px;
+}
+
+.dashboardCard {
+  padding: 30px;
+
+  background: #0d1b2d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+}
+
+.cardLabel {
+  margin-top: 0;
+
+  color: #75869d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* Risk Score */
+
+.scoreNumber {
+  margin-top: 15px;
+
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.scoreNumber span {
+  margin-left: 5px;
+
+  color: #718096;
+
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.scoreBar {
+  width: 100%;
+  height: 8px;
+
+  margin: 20px 0 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.scoreBarFill {
+  width: 83%;
+  height: 100%;
+
+  background: #3b82f6;
+
+  border-radius: 10px;
+}
+
+.goodText {
+  margin-bottom: 0;
+
+  color: #4ade80;
+
+  font-size: 14px;
+}
+
+
+/* Risk Assessment */
+
+.riskCard h2 {
+  margin: 18px 0 30px;
+
+  color: #4ade80;
+
+  font-size: 31px;
+}
+
+.riskRow {
+  padding: 15px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #9baabd;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.riskRow strong {
+  color: white;
+}
+
+
+/* Cash Flow Metrics */
+
+.sectionTitle {
+  margin: 45px 0 20px;
+
+  font-size: 21px;
+}
+
+.metricsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.metricCard {
+  padding: 22px;
+
+  background: #0d1b2d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+}
+
+.metricCard p {
+  margin: 0;
+
+  color: #8292a8;
+
+  font-size: 13px;
+}
+
+.metricCard h2 {
+  margin: 12px 0 7px;
+
+  font-size: 25px;
+}
+
+.metricCard span {
+  color: #5f7086;
+
+  font-size: 12px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+  .scoreGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboardHeader {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardContainer {
+    padding: 35px 18px;
+  }
+
+  .dashboardNav {
+    padding: 0 20px;
+  }
+
+  .demoBadge {
+    display: none;
+  }
+
+  .scoreNumber {
+    font-size: 48px;
+  }
+}/* =========================
+   SPENDING CHARTS
+========================= */
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.chartCard {
+  padding: 25px;
+
+  background: #0d1b2d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+}
+
+.chartHeader h3 {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+.chartHeader p {
+  margin: 7px 0 20px;
+
+  color: #718096;
+
+  font-size: 12px;
+}
+
+.chartContainer {
+  width: 100%;
+}
+
+.donutSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.chartLegend {
+  display: flex;
+  justify-content: center;
+
+  gap: 35px;
+
+  margin-top: 5px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+}
+
+.essentialDot {
+  background: #3b82f6;
+}
+
+.discretionaryDot {
+  background: #8b5cf6;
+}
+
+.legendItem p {
+  margin: 0;
+
+  color: #8292a8;
+
+  font-size: 11px;
+}
+
+.legendItem strong {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 14px;
+}
+
+
+/* Recharts Tooltip */
+
+.recharts-default-tooltip {
+  background: #101f32 !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+  border-radius: 8px !important;
+}
+
+
+/* Responsive charts */
+
+@media (max-width: 850px) {
+
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+
+}/* =========================
+   FINANCIAL BEHAVIOUR
+========================= */
+
+.behaviourGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.behaviourCard {
+  padding: 28px;
+
+  background: #0d1b2d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+}
+
+.behaviourHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.behaviourIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+
+  border-radius: 10px;
+
+  font-size: 20px;
+}
+
+.behaviourHeader h3 {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+.behaviourHeader p {
+  margin: 5px 0 0;
+
+  color: #718096;
+
+  font-size: 12px;
+}
+
+.behaviourRow {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 15px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  color: #8292a8;
+
+  font-size: 14px;
+}
+
+.behaviourRow strong {
+  color: white;
+}
+
+.incomeSources {
+  margin-top: 20px;
+}
+
+.incomeSources > p {
+  color: #607086;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.sourceTags {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.sourceTags span {
+  padding: 7px 11px;
+
+  background: rgba(59, 130, 246, 0.1);
+
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 6px;
+
+  color: #8bb8ff;
+
+  font-size: 12px;
+}
+
+
+/* Payments */
+
+.paymentItem {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 13px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.checkIcon {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.1);
+
+  border-radius: 50%;
+}
+
+.paymentItem strong {
+  font-size: 13px;
+}
+
+.paymentItem p {
+  margin: 4px 0 0;
+
+  color: #718096;
+
+  font-size: 11px;
+}
+
+.missedBills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 10px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  color: #8292a8;
+
+  font-size: 13px;
+}
+
+.missedBills strong {
+  color: #4ade80;
+
+  font-size: 22px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .behaviourGrid {
+    grid-template-columns: 1fr;
+  }
+
+}
