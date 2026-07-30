@@ -244,7 +244,11 @@ This project demonstrates the concept of AI-driven cash-flow underwriting and ca
 
 ## Team
 
-Divyansh shrivastava  Manya Goyal  Rashi Agarwal  Ananya Kesherwani  Pranav
+Divyansh shrivastava  
+Manya Goyal  
+Rashi Agarwal  
+Ananya Kesherwani  
+Pranav
 
 ---
 
