@@ -47,17 +47,46 @@ function App() {
   // PROCESSING TIMER
   // =========================
 
+  // =========================
+  // PROCESSING TIMER & API CALL
+  // =========================
+
   useEffect(() => {
-
     if (screen === "processing") {
+      
+      // 1. Call your Django backend while the loader is spinning
+      const fetchBackendScore = async () => {
+        try {
+          const response = await fetch("http://127.0.0.1:8000/api/score/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // Sending the mock demo data matching your dashboard metrics
+            body: JSON.stringify({
+              daily_balance: 1820.50,
+              spend_ratio: 0.315,
+              income_freq: 7 
+            }),
+          });
 
+          const data = await response.json();
+          console.log("✅ Django Response Received:", data);
+          // If successful, data.risk_score contains the output from your ML model!
+        } catch (error) {
+          console.error("❌ Connection failed to Django backend:", error);
+        }
+      };
+
+      fetchBackendScore();
+
+      // 2. Keep your 3-second delay for the smooth demo loading screen
       const timer = setTimeout(() => {
         setScreen("dashboard");
       }, 3000);
 
       return () => clearTimeout(timer);
     }
-
   }, [screen]);
 
 
