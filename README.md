@@ -144,7 +144,8 @@ Approve / Reject Loan
 
 ### Backend
 
-* Flask / FastAPI
+* Python
+* Django
 
 ### Frontend
 
