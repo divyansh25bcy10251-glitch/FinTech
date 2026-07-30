@@ -26,10 +26,3 @@ The model evaluates applicants based on core financial health indicators:
 5. **`avg_daily_balance`**: Running net cash flow divided by transaction timeline length.
 
 ---
-
-## ⚙️ Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/cashflow-underwriter.git](https://github.com/your-username/cashflow-underwriter.git)
-   cd cashflow-underwriter
