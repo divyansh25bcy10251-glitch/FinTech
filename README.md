@@ -124,7 +124,9 @@ Approve / Reject Loan
 ### Programming Language
 
 * Python
-*java
+*javascript
+*CSS
+*HTML
 
 ### Machine Learning
 
@@ -139,9 +141,6 @@ Approve / Reject Loan
 
 ### APIs
 
-* Plaid API
-* Teller API
-* Open Banking APIs
 
 ### Backend
 
