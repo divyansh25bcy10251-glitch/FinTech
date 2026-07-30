@@ -1,0 +1,150 @@
+{
+  "roc_auc": 0.8986496015795783,
+  "average_precision": 0.8136782649605967,
+  "ks_statistic": 0.6339468302658487,
+  "confusion_matrix": [
+    [
+      291,
+      35
+    ],
+    [
+      54,
+      120
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.8434782608695652,
+      "recall": 0.8926380368098159,
+      "f1-score": 0.8673621460506706,
+      "support": 326.0
+    },
+    "1": {
+      "precision": 0.7741935483870968,
+      "recall": 0.6896551724137931,
+      "f1-score": 0.729483282674772,
+      "support": 174.0
+    },
+    "accuracy": 0.822,
+    "macro avg": {
+      "precision": 0.808835904628331,
+      "recall": 0.7911466046118045,
+      "f1-score": 0.7984227143627214,
+      "support": 500.0
+    },
+    "weighted avg": {
+      "precision": 0.8193671809256662,
+      "recall": 0.822,
+      "f1-score": 0.8193803015958578,
+      "support": 500.0
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "disc_to_ess_ratio",
+      "importance": 282
+    },
+    {
+      "feature": "income_gap_cv",
+      "importance": 188
+    },
+    {
+      "feature": "min_balance",
+      "importance": 188
+    },
+    {
+      "feature": "rent_to_income",
+      "importance": 155
+    },
+    {
+      "feature": "income_trend",
+      "importance": 141
+    },
+    {
+      "feature": "gig_share",
+      "importance": 137
+    },
+    {
+      "feature": "income_gap_mean",
+      "importance": 131
+    },
+    {
+      "feature": "days_negative",
+      "importance": 122
+    },
+    {
+      "feature": "net_cashflow",
+      "importance": 106
+    },
+    {
+      "feature": "avg_balance",
+      "importance": 103
+    },
+    {
+      "feature": "weekend_spend_ratio",
+      "importance": 98
+    },
+    {
+      "feature": "monthly_expense",
+      "importance": 96
+    },
+    {
+      "feature": "discretionary_spend",
+      "importance": 92
+    },
+    {
+      "feature": "income_concentration",
+      "importance": 91
+    },
+    {
+      "feature": "essential_spend",
+      "importance": 83
+    },
+    {
+      "feature": "balance_volatility",
+      "importance": 80
+    },
+    {
+      "feature": "monthly_income",
+      "importance": 68
+    },
+    {
+      "feature": "salary_income",
+      "importance": 66
+    },
+    {
+      "feature": "n_transactions",
+      "importance": 60
+    },
+    {
+      "feature": "gig_income",
+      "importance": 56
+    },
+    {
+      "feature": "savings_rate",
+      "importance": 53
+    },
+    {
+      "feature": "rent_on_time_ratio",
+      "importance": 51
+    },
+    {
+      "feature": "txn_per_day",
+      "importance": 48
+    },
+    {
+      "feature": "overdraft_events",
+      "importance": 47
+    },
+    {
+      "feature": "total_days",
+      "importance": 26
+    },
+    {
+      "feature": "unique_merchants",
+      "importance": 12
+    }
+  ],
+  "n_train": 1500,
+  "n_test": 500
+}
