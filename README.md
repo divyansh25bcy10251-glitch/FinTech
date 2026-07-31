@@ -124,9 +124,9 @@ Approve / Reject Loan
 ### Programming Language
 
 * Python
-*javascript
-*CSS
-*HTML
+* javascript
+* CSS
+* HTML
 
 ### Machine Learning
 
@@ -249,6 +249,13 @@ Manya Goyal
 Rashi Agarwal  
 Ananya Kesharwani  
 Pranav Raghuvanshi
+
+---
+## ScreenShots
+<img width="1887" height="903" alt="Screenshot 2026-07-31 120920" src="https://github.com/user-attachments/assets/5f7e9ce6-d0d9-4ff0-a7a8-614828a37603" />
+<img width="920" height="488" alt="Screenshot 2026-07-31 121031" src="https://github.com/user-attachments/assets/47accd5c-70ca-47f1-b28a-dcde1addb638" />
+<img width="1885" height="898" alt="Screenshot 2026-07-31 120933" src="https://github.com/user-attachments/assets/843da366-63bc-43f6-96ec-16b6414e3f7e" />
+<img width="1870" height="916" alt="Screenshot 2026-07-31 120948" src="https://github.com/user-attachments/assets/54ce4afa-ee0f-4835-b51a-9924bd1de46c" />
 
 ---
 
